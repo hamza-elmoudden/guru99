@@ -39,26 +39,26 @@ export function PlanSlider({ children, prev, next }: { children: React.ReactNode
 
 
   const arrow =
-    "absolute top-1/2 z-10 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-line-strong bg-panel/90 text-fg shadow-card backdrop-blur transition hover:border-primary hover:bg-elevated";
+    "z-10 flex size-10 cursor-pointer md:absolute md:top-1/2 md:-translate-y-1/2 items-center justify-center rounded-full border border-line-strong bg-panel/90 text-fg shadow-card backdrop-blur transition hover:border-primary hover:bg-elevated";
 
   return (
     <div
-      className="relative mx-auto max-w-[1200px]"
+      className="relative mx-auto max-w-[1200px] max-md:flex max-md:flex-wrap max-md:justify-center max-md:gap-4"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onTouchStart={() => setPaused(true)}
       onTouchEnd={() => setTimeout(() => setPaused(false), 6000)}
     >
-      <button type="button" aria-label={prev} onClick={() => scroll(-1)} className={`${arrow} left-0 max-md:left-1 md:-left-5`}>
+      <button type="button" aria-label={prev} onClick={() => scroll(-1)} className={`${arrow} md:-left-5`}>
         <IconChevronLeft size={18} />
       </button>
       <div
         ref={ref}
-        className="flex snap-x justify-center-safe snap-mandatory items-stretch gap-6 overflow-x-auto scroll-smooth px-2 pt-6 pb-10 max-md:px-12 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="flex snap-x justify-center-safe snap-mandatory items-stretch gap-6 overflow-x-auto scroll-smooth px-2 pt-6 pb-10 max-md:order-first max-md:w-full max-md:px-0 max-md:pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {children}
       </div>
-      <button type="button" aria-label={next} onClick={() => scroll(1)} className={`${arrow} right-0 max-md:right-1 md:-right-5`}>
+      <button type="button" aria-label={next} onClick={() => scroll(1)} className={`${arrow} md:-right-5`}>
         <IconChevronRight size={18} />
       </button>
     </div>
