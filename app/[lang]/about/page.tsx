@@ -52,7 +52,7 @@ export default async function AboutPage() {
           mainEntity: { "@id": ORG_ID },
         }}
       />
-      <PageHero label={ui.about.label} title={title} sub={description} />
+      <PageHero label={ui.about.label} title={title} />
       <ChannelsSlider />
       <WaveDivider variant="f" />
       <InfoSections sections={sections} features={features} leaves />
