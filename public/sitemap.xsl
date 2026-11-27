@@ -13,7 +13,7 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="robots" content="noindex"/>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2"/>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3"/>
         <title>XML Sitemap · IPTV Pro</title>
         <style>
           :root { --bg:#0d0810; --fg:#f0e8ea; --muted:#bfa5a4; --crimson:#dc143c; --teal:#0093d5; --teal-light:#5cb6d6; --violet:#5c4b8a; --line:rgb(0 147 213 / .2); }
@@ -41,7 +41,7 @@
           .alts a { color:var(--muted); margin-right:10px; }
           .lang { display:inline-block; min-width:34px; text-align:center; border-radius:999px; padding:2px 8px; font-size:11px; font-weight:800; text-transform:uppercase; border:1px solid currentColor; }
           .lang-en { color:var(--teal-light); }
-          .lang-pl { color:#ff6f8a; }
+          .lang-fi { color:#ff6f8a; }
           .num, .date { white-space:nowrap; color:var(--muted); }
           .bar { display:inline-block; vertical-align:middle; width:56px; height:6px; border-radius:6px; background:rgb(255 255 255 / .08); margin-right:8px; overflow:hidden; }
           .bar i { display:block; height:100%; background:linear-gradient(90deg, var(--teal), var(--crimson)); }
@@ -57,7 +57,7 @@
         <header>
           <span class="label">XML Sitemap</span>
           <h1>IPTV Pro Sitemap</h1>
-          <p>This file is for search engines. Looking for a page? Try the <a href="/en/sitemap">sitemap page</a> or <a href="/pl/sitemap">mapę strony</a>.</p>
+          <p>This file is for search engines. Looking for a page? Try the <a href="/en/sitemap">sitemap page</a> or <a href="/fi/sitemap">sivukartta</a>.</p>
         </header>
         <div class="wrap">
           <xsl:apply-templates select="s:urlset | s:sitemapindex"/>
@@ -70,7 +70,7 @@
     <div class="stats">
       <span class="stat"><b><xsl:value-of select="count(s:url)"/></b>URLs</span>
       <span class="stat"><b><xsl:value-of select="count(s:url[xhtml:link[@hreflang='en'][@href = ../s:loc]])"/></b>English</span>
-      <span class="stat"><b><xsl:value-of select="count(s:url[xhtml:link[@hreflang='pl'][@href = ../s:loc]])"/></b>Polish</span>
+      <span class="stat"><b><xsl:value-of select="count(s:url[xhtml:link[@hreflang='fi'][@href = ../s:loc]])"/></b>Finnish</span>
     </div>
     <div class="table">
       <table>
