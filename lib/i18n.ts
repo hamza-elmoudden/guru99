@@ -209,6 +209,7 @@ const dictionary = {
       blog: "Blog articles",
       otherLanguage: "Available in Finnish only",
       updated: "Updated",
+      xml: "XML sitemap",
     },
     notFound: {
       title: "Page not found",
@@ -384,6 +385,7 @@ const dictionary = {
       blog: "Blogiartikkelit",
       otherLanguage: "Saatavilla vain englanniksi",
       updated: "Päivitetty",
+      xml: "XML-sivukartta",
     },
     notFound: {
       title: "Sivua ei löytynyt",
